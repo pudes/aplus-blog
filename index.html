@@ -127,6 +127,40 @@ footer .base{border-top:1px solid #333230;margin-top:30px;padding-top:20px;font-
 .brand .logo{height:34px;width:auto;display:block}
 @media(max-width:640px){.brand .logo{height:28px}}
 .flogo{height:34px;width:auto;margin-bottom:12px;display:block}
+
+/* Google Reviews */
+.rev-header{text-align:center;margin-bottom:32px}
+.rev-header h2{font-family:"Montserrat",sans-serif;font-size:clamp(22px,4vw,32px);font-weight:800;color:var(--ink);margin-bottom:8px}
+.rev-overall{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--ink-soft);font-size:.9rem}
+.rev-score{font-size:2rem;font-weight:800;color:var(--ink);font-family:"Montserrat",sans-serif}
+.rev-stars{display:flex;gap:2px}
+.rev-star{color:#e8b800;font-size:1.1rem}
+.rev-star.empty{color:#ccc}
+.rev-track-wrap{overflow:hidden}
+.rev-track{display:flex;gap:16px;transition:transform .5s ease}
+.rev-card{background:var(--wash);border:1px solid var(--line);border-radius:12px;padding:20px;min-width:calc(33.333% - 11px);flex-shrink:0}
+@media(max-width:700px){.rev-card{min-width:100%}}
+@media(min-width:701px) and (max-width:1000px){.rev-card{min-width:calc(50% - 8px)}}
+.rev-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.rev-avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;background:var(--line);flex-shrink:0}
+.rev-avatar-ph{width:40px;height:40px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:1rem;flex-shrink:0;font-family:"Montserrat",sans-serif}
+.rev-info{flex:1;min-width:0}
+.rev-name{color:var(--ink);font-weight:700;font-size:.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rev-date{color:var(--ink-soft);font-size:.75rem;margin-top:2px}
+.rev-rstars{display:flex;gap:2px;margin-bottom:10px}
+.rev-rstar{color:#e8b800;font-size:.9rem}
+.rev-rstar.empty{color:#ccc}
+.rev-text{color:var(--ink-soft);font-size:.83rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.rev-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:24px}
+.rev-btn{background:var(--wash);border:1px solid var(--line);color:var(--ink);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:border-color .2s}
+.rev-btn:hover{border-color:var(--red)}
+.rev-dots{display:flex;gap:6px}
+.rev-dot{width:7px;height:7px;border-radius:50%;background:var(--line);cursor:pointer;transition:background .2s}
+.rev-dot.active{background:var(--red)}
+.rev-glink{display:block;text-align:center;margin-top:20px;color:var(--ink-soft);font-size:.78rem;text-decoration:none;transition:color .2s}
+.rev-glink:hover{color:var(--red)}
+.rev-loading{text-align:center;color:var(--ink-soft);padding:40px;font-size:.9rem}
+.rev-error{text-align:center;color:var(--red);padding:20px;font-size:.85rem}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Locksmith", "@id": "https://apluslocksmith.bg#business", "name": "А+ Ключар", "image": "https://blog.apluslocksmith.bg/img/post01_3.jpg", "telephone": "+359879993321", "email": "a.plus.locksmith.ltd@gmail.com", "url": "https://apluslocksmith.bg", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "ж.к. Малинова долина, бл. 25", "addressLocality": "София", "postalCode": "1797", "addressCountry": "BG"}, "areaServed": {"@type": "City", "name": "София"}}, {"@type": "Blog", "@id": "https://blog.apluslocksmith.bg/#blog", "name": "А+ Ключар — Блог", "url": "https://blog.apluslocksmith.bg", "description": "Реални случаи от ключарската практика в София.", "publisher": {"@id": "https://apluslocksmith.bg#business"}, "blogPost": [{"@type": "BlogPosting", "headline": "Труден за завъртане контактен ключ? Не бързайте със смяна на патрона", "url": "https://blog.apluslocksmith.bg/iznosen-kontakten-klyuch-remont-sofia.html", "datePublished": "2026-07-04"},
 {"@type": "BlogPosting", "headline": "Твърде много приемници на бариерата? Обединяваме ги в едно устройство", "url": "https://blog.apluslocksmith.bg/mnogo-priemnici-distancionno-bariera-sofia.html", "datePublished": "2026-07-09"},
@@ -259,7 +293,7 @@ footer .base{border-top:1px solid #333230;margin-top:30px;padding-top:20px;font-
 <div class="thumb"><img src="./img/post03_1.jpg" alt="Механизъм на брава Solid 55, изхабен и на път да блокира" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Битови брави</span>
 <h2>Заклинила брава Solid 55 — фино отваряне и смяна на механизма</h2>
-<p class="ex">Клиент ни се обади — бравата му „закачаше“ от известно време и накрая спря да отключва напълно.</p>
+<p class="ex">Клиент ни се обади — бравата му „закачаше" от известно време и накрая спря да отключва напълно.</p>
 <span class="more">Прочети случая →</span></div></a><a class="card" href="./programirane-distancionno-bariera-sofia.html">
 <div class="thumb"><img src="./img/post04_1.jpg" alt="Отваряне на кутията за управление на паркинг бариера за програмиране" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Гаражи и бариери</span>
@@ -296,6 +330,76 @@ footer .base{border-top:1px solid #333230;margin-top:30px;padding-top:20px;font-
 <h2>Втори ключ за BMW X5 Alpina (2020) — изработка и програмиране</h2>
 <p class="ex">Изработка и програмиране на втори ключ за BMW X5 в рядкото Alpina изпълнение.</p>
 <span class="more">Прочети случая →</span></div></a></div></main>
+
+<!-- Google Reviews Widget -->
+<section style="max-width:1080px;margin:0 auto;padding:0 24px 60px">
+<div class="rev-header">
+  <h2>Какво казват клиентите</h2>
+  <div class="rev-overall">
+    <span class="rev-score" id="rev-score">—</span>
+    <div>
+      <div class="rev-stars" id="rev-stars"></div>
+      <div id="rev-count" style="margin-top:3px;text-align:left"></div>
+    </div>
+  </div>
+</div>
+<div id="rev-container">
+  <div class="rev-loading">Зареждане на отзиви...</div>
+</div>
+<div class="rev-nav" id="rev-nav" style="display:none">
+  <button class="rev-btn" onclick="revNav(-1)">&#8592;</button>
+  <div class="rev-dots" id="rev-dots"></div>
+  <button class="rev-btn" onclick="revNav(1)">&#8594;</button>
+</div>
+<a class="rev-glink" id="rev-glink" target="_blank" rel="noopener">Виж всички отзиви в Google ↗</a>
+</section>
+<script>
+(function(){
+  var PLACE_ID='ChIJAT8LXbOFqkARu_R846sogEw';
+  var API_KEY='AIzaSyC3PIFRqWM5fY7UuALurayNJW9wiwBhXjg';
+  var curPage=0,reviews=[],autoT;
+  function cpp(){return window.innerWidth<=700?1:window.innerWidth<=1000?2:3}
+  function stars(r,c){var h='';for(var i=1;i<=5;i++)h+='<span class="'+c+(i>r?' empty':'')+'">★</span>';return h}
+  function render(){
+    var cp=cpp(),pages=Math.ceil(reviews.length/cp);
+    if(curPage>=pages)curPage=pages-1;
+    var t=document.querySelector('.rev-track');if(!t)return;
+    var o=curPage*cp,v=reviews.slice(o,o+cp);
+    t.innerHTML=v.map(function(r){
+      var ini=r.author_name.split(' ').map(function(w){return w[0]}).join('').slice(0,2).toUpperCase();
+      var av=r.profile_photo_url?'<img class="rev-avatar" src="'+r.profile_photo_url+'" alt="'+r.author_name+'" loading="lazy">':'<div class="rev-avatar-ph">'+ini+'</div>';
+      return '<div class="rev-card"><div class="rev-row">'+av+'<div class="rev-info"><div class="rev-name">'+r.author_name+'</div><div class="rev-date">'+r.relative_time_description+'</div></div></div><div class="rev-rstars">'+stars(r.rating,'rev-rstar')+'</div><p class="rev-text">'+(r.text||'')+'</p></div>';
+    }).join('');
+    var dots=document.getElementById('rev-dots');dots.innerHTML='';
+    for(var i=0;i<pages;i++){var d=document.createElement('div');d.className='rev-dot'+(i===curPage?' active':'');d.setAttribute('data-i',i);d.onclick=function(){goTo(parseInt(this.getAttribute('data-i')))};dots.appendChild(d)}
+  }
+  window.revNav=function(dir){var pages=Math.ceil(reviews.length/cpp());curPage=(curPage+dir+pages)%pages;render();resetA()};
+  function goTo(i){curPage=i;render();resetA()}
+  function resetA(){clearInterval(autoT);autoT=setInterval(function(){window.revNav(1)},5000)}
+  async function load(){
+    try{
+      var url='https://places.googleapis.com/v1/places/'+PLACE_ID+'?fields=displayName,rating,userRatingCount,reviews,googleMapsUri&languageCode=bg&key='+API_KEY;
+      var res=await fetch(url);var data=await res.json();
+      if(data.error)throw new Error(data.error.message);
+      var score=data.rating||0;
+      document.getElementById('rev-score').textContent=score.toFixed(1);
+      document.getElementById('rev-stars').innerHTML=stars(Math.round(score),'rev-star');
+      document.getElementById('rev-count').textContent=(data.userRatingCount||0)+' отзива в Google';
+      if(data.googleMapsUri)document.getElementById('rev-glink').href=data.googleMapsUri;
+      reviews=(data.reviews||[]).filter(function(r){return r.text&&r.text.text&&r.text.text.trim()});
+      reviews=reviews.map(function(r){return{author_name:r.authorAttribution?r.authorAttribution.displayName:'',profile_photo_url:r.authorAttribution?r.authorAttribution.photoUri:'',rating:r.rating||5,text:r.text?r.text.text:'',relative_time_description:r.relativePublishTimeDescription||''}});
+      if(!reviews.length){document.getElementById('rev-container').innerHTML='<div class="rev-error">Няма текстови отзиви.</div>';return}
+      document.getElementById('rev-container').innerHTML='<div class="rev-track"></div>';
+      document.getElementById('rev-nav').style.display='flex';
+      render();resetA();
+      window.addEventListener('resize',render);
+    }catch(e){console.error(e);document.getElementById('rev-container').innerHTML='<div class="rev-error">Грешка: '+e.message+'</div>'}
+  }
+  load();
+})();
+</script>
+<!-- End Google Reviews Widget -->
+
 <footer><div class="wrap"><div class="cols">
 <div>
 <img class="flogo" src="./img/logo-white.png" alt="А+ Ключар">
