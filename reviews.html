@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Montserrat,sans-serif;background:transparent;padding:20px 16px 10px}
+.rv-h{text-align:center;margin-bottom:24px}
+.rv-h h2{color:#fff;font-size:1.3rem;font-weight:700;margin-bottom:8px}
+.rv-overall{display:flex;align-items:center;justify-content:center;gap:10px;color:#aaa;font-size:.88rem}
+.rv-score{font-size:1.9rem;font-weight:700;color:#fff}
+.rv-stars,.rv-rstars{display:flex;gap:2px}
+.rv-star,.rv-rstar{color:#e8b800;font-size:1rem}
+.rv-star.empty,.rv-rstar.empty{color:#444}
+.rv-track{display:flex;gap:14px;overflow:hidden}
+.rv-card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:10px;padding:16px;min-width:calc(33.333% - 10px);max-width:calc(33.333% - 10px);flex-shrink:0;box-sizing:border-box}
+@media(max-width:600px){.rv-card{min-width:100%;max-width:100%}}
+@media(min-width:601px) and (max-width:900px){.rv-card{min-width:calc(50% - 7px);max-width:calc(50% - 7px)}}
+.rv-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.rv-ph{width:36px;height:36px;border-radius:50%;background:#c0392b;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.9rem;flex-shrink:0}
+.rv-img{width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.rv-name{color:#fff;font-weight:600;font-size:.83rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rv-date{color:#666;font-size:.71rem;margin-top:2px}
+.rv-text{color:#bbb;font-size:.8rem;line-height:1.55;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.rv-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:18px}
+.rv-btn{background:#1a1a1a;border:1px solid #333;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;transition:border-color .2s}
+.rv-btn:hover{border-color:#c0392b}
+.rv-dots{display:flex;gap:6px}
+.rv-dot{width:7px;height:7px;border-radius:50%;background:#333;cursor:pointer;transition:background .2s}
+.rv-dot.active{background:#c0392b}
+.rv-link{display:block;text-align:center;margin-top:14px;color:#666;font-size:.74rem;text-decoration:none;transition:color .2s}
+.rv-link:hover{color:#c0392b}
+.rv-load{text-align:center;color:#666;padding:30px;font-size:.86rem}
+.rv-err{text-align:center;color:#c0392b;padding:16px;font-size:.82rem}
+</style>
+</head>
+<body>
+<div class="rv-h">
+  <h2>Какво казват клиентите</h2>
+  <div class="rv-overall">
+    <span class="rv-score" id="rv-score">—</span>
+    <div>
+      <div class="rv-stars" id="rv-stars"></div>
+      <div id="rv-count" style="margin-top:3px;text-align:left"></div>
+    </div>
+  </div>
+</div>
+<div id="rv-container"><div class="rv-load">Зареждане...</div></div>
+<div class="rv-nav" id="rv-nav" style="display:none">
+  <button class="rv-btn" onclick="rvNav(-1)">&#8592;</button>
+  <div class="rv-dots" id="rv-dots"></div>
+  <button class="rv-btn" onclick="rvNav(1)">&#8594;</button>
+</div>
+<a class="rv-link" id="rv-glink" target="_blank" rel="noopener">Виж всички отзиви в Google ↗</a>
+
+<script>
+(function(){
+  var PID='ChIJAT8LXbOFqkARu_R846sogEw';
+  var KEY='AIzaSyC3PIFRqWM5fY7UuALurayNJW9wiwBhXjg';
+  var page=0,revs=[],timer;
+
+  function cpp(){return window.innerWidth<=600?1:window.innerWidth<=900?2:3}
+  function st(r,c){var h='';for(var i=1;i<=5;i++)h+='<span class="'+c+(i>r?' empty':'')+'">★</span>';return h}
+
+  function render(){
+    var cp=cpp(),pages=Math.ceil(revs.length/cp);
+    if(page>=pages)page=pages-1;
+    var t=document.querySelector('.rv-track');if(!t)return;
+    var v=revs.slice(page*cp,page*cp+cp);
+    t.innerHTML=v.map(function(r){
+      var ini=r.n.split(' ').map(function(w){return w[0]}).join('').slice(0,2).toUpperCase();
+      var av=r.p?'<img class="rv-img" src="'+r.p+'" alt="'+r.n+'" loading="lazy">':'<div class="rv-ph">'+ini+'</div>';
+      return '<div class="rv-card"><div class="rv-row">'+av+'<div style="min-width:0"><div class="rv-name">'+r.n+'</div><div class="rv-date">'+r.d+'</div></div></div><div class="rv-rstars">'+st(r.r,'rv-rstar')+'</div><p class="rv-text">'+r.t+'</p></div>';
+    }).join('');
+    var dots=document.getElementById('rv-dots');dots.innerHTML='';
+    for(var i=0;i<pages;i++){
+      var d=document.createElement('div');
+      d.className='rv-dot'+(i===page?' active':'');
+      d.setAttribute('data-i',i);
+      d.onclick=function(){page=parseInt(this.getAttribute('data-i'));render();reset()};
+      dots.appendChild(d);
+    }
+    // notify parent of height
+    try{window.parent.postMessage({rvHeight:document.body.scrollHeight},'*')}catch(e){}
+  }
+
+  window.rvNav=function(dir){
+    var p=Math.ceil(revs.length/cpp());
+    page=(page+dir+p)%p;render();reset();
+  };
+  function reset(){clearInterval(timer);timer=setInterval(function(){window.rvNav(1)},5000)}
+
+  fetch('https://places.googleapis.com/v1/places/'+PID+'?fields=rating,userRatingCount,reviews,googleMapsUri&languageCode=bg&key='+KEY)
+  .then(function(r){return r.json()})
+  .then(function(data){
+    if(data.error)throw new Error(data.error.message);
+    document.getElementById('rv-score').textContent=(data.rating||0).toFixed(1);
+    document.getElementById('rv-stars').innerHTML=st(Math.round(data.rating||0),'rv-star');
+    document.getElementById('rv-count').textContent=(data.userRatingCount||0)+' отзива в Google';
+    if(data.googleMapsUri)document.getElementById('rv-glink').href=data.googleMapsUri;
+    revs=(data.reviews||[]).filter(function(r){return r.text&&r.text.text}).map(function(r){
+      return{n:r.authorAttribution?r.authorAttribution.displayName:'',p:r.authorAttribution?r.authorAttribution.photoUri:'',r:r.rating||5,t:r.text.text,d:r.relativePublishTimeDescription||''};
+    });
+    if(!revs.length){document.getElementById('rv-container').innerHTML='<div class="rv-err">Няма отзиви.</div>';return}
+    document.getElementById('rv-container').innerHTML='<div class="rv-track"></div>';
+    document.getElementById('rv-nav').style.display='flex';
+    render();reset();
+    window.addEventListener('resize',render);
+  })
+  .catch(function(e){
+    document.getElementById('rv-container').innerHTML='<div class="rv-err">Грешка: '+e.message+'</div>';
+  });
+})();
+</script>
+</body>
+</html>
