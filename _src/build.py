@@ -95,7 +95,20 @@ def build(mod):
 <a class="hidem" href="./index.html">Блог</a>
 <a class="hidem" href="https://apluslocksmith.bg">Официален сайт</a>
 <a class="callbtn" href="tel:+359879993321">☎ 0879 99 33 21</a>
-</nav></div></header>
+<button class="menubtn" aria-label="Меню" aria-expanded="false" aria-controls="mnav">☰</button>
+</nav></div>
+<div class="mnav" id="mnav">
+<a href="./index.html">Всички случаи<span class="n">31</span></a>
+<div class="sep">Категории</div>
+<a href="./index.html#avto">Автоключарски услуги<span class="n">15</span></a>
+<a href="./index.html#bravi">Битови брави<span class="n">9</span></a>
+<a href="./index.html#garaji">Гаражи и бариери<span class="n">6</span></a>
+<a href="./index.html#dostap">Контрол на достъп<span class="n">1</span></a>
+<div class="sep">А+ Ключар</div>
+<a href="https://apluslocksmith.bg">Официален сайт<span class="n">→</span></a>
+<a href="tel:+359879993321">Обади се<span class="n">0879 99 33 21</span></a>
+</div>
+</header>
 <article>
 <div class="back wrap"><a href="./index.html">← Всички случаи</a></div>
 <div class="arthead wrap">
@@ -131,12 +144,32 @@ def build(mod):
 </div>
 <div class="base">© 2026 А+ Ключар · А ПЛЮС ЛОКСМИТ ООД · Всички права запазени.</div>
 </div></footer>
+<script>
+(function(){
+ var b=document.querySelector('.menubtn'), m=document.getElementById('mnav');
+ if(b&&m){b.addEventListener('click',function(){
+   var o=m.classList.toggle('open'); b.setAttribute('aria-expanded',o?'true':'false');
+   b.textContent=o?'\u2715':'\u2630';});}
+ var f=document.getElementById('filters');
+ if(f){
+  var cards=[].slice.call(document.querySelectorAll('.grid > .card'));
+  function apply(s){
+   cards.forEach(function(c){c.style.display=(!s||c.dataset.cat===s)?'':'none';});
+   [].forEach.call(f.children,function(x){x.classList.toggle('on',(x.dataset.cat||'')===(s||''));});
+   history.replaceState(null,'',s?('#'+s):location.pathname);
+  }
+  f.addEventListener('click',function(e){
+   var t=e.target.closest('button'); if(!t)return; apply(t.dataset.cat||'');});
+  apply((location.hash||'').replace('#','')); 
+ }
+})();
+</script>
 </body>
 </html>
 """
 
 sys.path.insert(0, '/home/claude')
-for mod in ("article1","article10","article11","article12","article3","article4","article5","article6","article7","article8",):
+for mod in ("article12",):
     m = importlib.import_module(mod)
     html = build(mod)
     open('/home/claude/aplus-blog/'+m.slug,'w',encoding='utf-8').write(html)

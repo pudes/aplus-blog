@@ -161,6 +161,23 @@ footer .base{border-top:1px solid #333230;margin-top:30px;padding-top:20px;font-
 .rev-glink:hover{color:var(--red)}
 .rev-loading{text-align:center;color:var(--ink-soft);padding:40px;font-size:.9rem}
 .rev-error{text-align:center;color:var(--red);padding:20px;font-size:.85rem}
+
+/* мобилно меню */
+.menubtn{display:none;background:none;border:0;color:#fff;font-size:21px;line-height:1;padding:9px 11px;cursor:pointer;border-radius:6px}
+.menubtn:hover,.menubtn:focus-visible{background:rgba(255,255,255,.12)}
+.mnav{display:none;background:var(--panel);border-top:1px solid rgba(255,255,255,.1);padding:6px 0 12px}
+.mnav.open{display:block}
+.mnav a{display:flex;justify-content:space-between;align-items:center;color:#d8d3cc;padding:13px 20px;font-size:15px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.07)}
+.mnav a:active{background:rgba(255,255,255,.06)}
+.mnav a .n{color:#8d8880;font-weight:700;font-size:12.5px}
+.mnav .sep{padding:15px 20px 7px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8d8880;font-weight:800}
+@media(max-width:640px){.menubtn{display:block}.top nav{gap:7px}.brand .logo{height:24px}.callbtn{padding:9px 11px;font-size:12.5px;white-space:nowrap;letter-spacing:-.2px}}
+/* филтри по категория */
+.filters{max-width:1180px;margin:0 auto;padding:24px 20px 0;display:flex;gap:8px;flex-wrap:wrap}
+.filters button{border:1px solid var(--line);background:#fff;color:var(--ink-soft);padding:8px 15px;border-radius:999px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;transition:all .15s}
+.filters button:hover{border-color:var(--ink-soft)}
+.filters button.on{background:var(--panel);color:#fff;border-color:var(--panel)}
+.filters .cnt{opacity:.55;margin-left:5px;font-size:12.5px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Locksmith", "@id": "https://apluslocksmith.bg#business", "name": "А+ Ключар", "image": "https://blog.apluslocksmith.bg/img/post01_3.jpg", "telephone": "+359879993321", "email": "a.plus.locksmith.ltd@gmail.com", "url": "https://apluslocksmith.bg", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "ж.к. Малинова долина, бл. 25", "addressLocality": "София", "postalCode": "1797", "addressCountry": "BG"}, "areaServed": {"@type": "City", "name": "София"}, "sameAs": ["https://blog.apluslocksmith.bg/"]}, {"@type": "Organization", "@id": "https://apluslocksmith.bg#org", "name": "А ПЛЮС ЛОКСМИТ ООД", "alternateName": "А+ Ключар", "url": "https://apluslocksmith.bg", "logo": "https://blog.apluslocksmith.bg/img/logo-white.png", "telephone": "+359879993321", "sameAs": ["https://blog.apluslocksmith.bg/"]}, {"@type": "WebSite", "@id": "https://blog.apluslocksmith.bg/#website", "url": "https://blog.apluslocksmith.bg/", "name": "А+ Ключар — Блог", "inLanguage": "bg-BG", "publisher": {"@id": "https://apluslocksmith.bg#business"}}, {"@type": "Blog", "@id": "https://blog.apluslocksmith.bg/#blog", "name": "А+ Ключар — Блог", "url": "https://blog.apluslocksmith.bg", "description": "Реални случаи от ключарската практика в София.", "publisher": {"@id": "https://apluslocksmith.bg#business"}, "blogPost": [{"@type": "BlogPosting", "headline": "Locksport — хобито, което направи ключалките по-добри", "url": "https://blog.apluslocksmith.bg/locksport-hobi-koeto-podobryava-klyuchalkite.html", "datePublished": "2026-10-04"}, {"@type": "BlogPosting", "headline": "Изгубен ключ за VW Up (2012) — изработка на място за под час", "url": "https://blog.apluslocksmith.bg/izrabotka-klyuch-vw-up-2012-sofia.html", "datePublished": "2026-10-04"}, {"@type": "BlogPosting", "headline": "Три дистанционни в едно — копиране на скачащ и фиксиран код с JMA M-BT", "url": "https://blog.apluslocksmith.bg/kombinirane-distancionni-jma-mbt-sofia.html", "datePublished": "2026-10-03"}, {"@type": "BlogPosting", "headline": "Ключ, който работи само когато вие решите — EVVA 3KS с функция TAF", "url": "https://blog.apluslocksmith.bg/evva-3ks-taf-vremenen-dostap-sofia.html", "datePublished": "2026-09-10"}, {"@type": "BlogPosting", "headline": "Труден за завъртане контактен ключ? Не бързайте със смяна на патрона", "url": "https://blog.apluslocksmith.bg/iznosen-kontakten-klyuch-remont-sofia.html", "datePublished": "2026-07-04"}, {"@type": "BlogPosting", "headline": "Твърде много приемници на бариерата? Обединяваме ги в едно устройство", "url": "https://blog.apluslocksmith.bg/mnogo-priemnici-distancionno-bariera-sofia.html", "datePublished": "2026-07-09"}, {"@type": "BlogPosting", "headline": "Kia Niro без нито един ключ — изработка на нов смарт ключ на място", "url": "https://blog.apluslocksmith.bg/izgubeni-klyuchove-kia-niro-sofia.html", "datePublished": "2026-07-14"}, {"@type": "BlogPosting", "headline": "Допълнително дистанционно за автоматика BERG — обучаване на място", "url": "https://blog.apluslocksmith.bg/distancionno-avtomatika-berg-sofia.html", "datePublished": "2026-07-18"}, {"@type": "BlogPosting", "headline": "Проблемно дистанционно и комфорт модул на VW Golf IV — решение без скъп ремонт", "url": "https://blog.apluslocksmith.bg/remont-distancionno-modul-vw-golf-sofia.html", "datePublished": "2026-07-23"}, {"@type": "BlogPosting", "headline": "Как се прави ключ за кола — какво стои зад изработката и защо отнема време", "url": "https://blog.apluslocksmith.bg/zashto-avtoklyuch-struva-skupo-sofia.html", "datePublished": "2026-07-29"}, {"@type": "BlogPosting", "headline": "Едно дистанционно за гаражна врата и автоматика PROTECO", "url": "https://blog.apluslocksmith.bg/distancionno-proteco-garazhna-vrata-sofia.html", "datePublished": "2026-08-04"}, {"@type": "BlogPosting", "headline": "Втори ключ за Renault Modus — нарязан и програмиран за 15 минути", "url": "https://blog.apluslocksmith.bg/vtori-klyuch-renault-modus-sofia.html", "datePublished": "2026-08-11"}, {"@type": "BlogPosting", "headline": "LaGard 3300 и 2200 — сейфови брави от банкомати за ентусиасти", "url": "https://blog.apluslocksmith.bg/lagard-seifovi-bravi-bankomat-sofia.html", "datePublished": "2026-08-17"}, {"@type": "BlogPosting", "headline": "BMW M8 Competition — програмиране на два оригинални ключа по системата BDC", "url": "https://blog.apluslocksmith.bg/bmw-m8-bdc3-programirane-klyuchove-sofia.html", "datePublished": "2026-08-23"}, {"@type": "BlogPosting", "headline": "Изгубен ключ за Toyota Corolla (2016, Luna) — изработка на адрес", "url": "https://blog.apluslocksmith.bg/izguben-klyuch-toyota-corolla-2016-sofia.html", "datePublished": "2026-07-09"}, {"@type": "BlogPosting", "headline": "Колко сигурен е фабричният патрон на входната ви врата", "url": "https://blog.apluslocksmith.bg/slabi-fabrichni-patroni-vhodna-vrata-sofia.html", "datePublished": "2026-07-09"}, {"@type": "BlogPosting", "headline": "Изработка на ключове — стотици профили заготовки на склад", "url": "https://blog.apluslocksmith.bg/izrabotka-dublikat-klyuch-zagotovki-sofia.html", "datePublished": "2026-07-08"}, {"@type": "BlogPosting", "headline": "Изпран автоключ — почистване на корозия и възстановяване на платката", "url": "https://blog.apluslocksmith.bg/izpran-avtoklyuch-remont-korozia-sofia.html", "datePublished": "2026-07-08"}, {"@type": "BlogPosting", "headline": "Заяло заключване на сваляем теглич Westfalia — сваляне на място", "url": "https://blog.apluslocksmith.bg/svalyaem-teglich-westfalia-zaklyuchvane-sofia.html", "datePublished": "2026-07-04"}, {"@type": "BlogPosting", "headline": "Смяна на патрон с EVVA EPS — случай от практиката в Малинова долина", "url": "https://blog.apluslocksmith.bg/smiana-patron-evva-eps-sofia.html", "datePublished": "2026-06-30"}, {"@type": "BlogPosting", "headline": "Клониране и декодиране на RFID/NFC карти за достъп в София", "url": "https://blog.apluslocksmith.bg/klonirane-rfid-nfc-karti-sofia.html", "datePublished": "2026-06-28"}, {"@type": "BlogPosting", "headline": "Заклинила брава Solid 55 — фино отваряне и смяна на механизма", "url": "https://blog.apluslocksmith.bg/remont-zaklinila-brava-solid-55.html", "datePublished": "2026-06-25"}, {"@type": "BlogPosting", "headline": "Загубено дистанционно за бариера — отваряне и програмиране на място", "url": "https://blog.apluslocksmith.bg/programirane-distancionno-bariera-sofia.html", "datePublished": "2026-06-20"}, {"@type": "BlogPosting", "headline": "Едно дистанционно за гараж, бариера и портал — консолидация", "url": "https://blog.apluslocksmith.bg/universalno-distancionno-garaj-bariera-portal.html", "datePublished": "2026-06-15"}, {"@type": "BlogPosting", "headline": "След взлом — ъпгрейд с EVVA MCS и бронировка в София", "url": "https://blog.apluslocksmith.bg/sled-vzlom-evva-mcs-bronirovka-sofia.html", "datePublished": "2026-06-10"}, {"@type": "BlogPosting", "headline": "Изгубен ключ за Toyota Sequoia Platinum — изработка на място", "url": "https://blog.apluslocksmith.bg/izraboka-klyuch-toyota-sequoia-sofia.html", "datePublished": "2026-06-05"}, {"@type": "BlogPosting", "headline": "Ремонт на дистанционно за SAAB — диагностика на платката", "url": "https://blog.apluslocksmith.bg/remont-distancionno-saab-platka.html", "datePublished": "2026-05-28"}, {"@type": "BlogPosting", "headline": "Признаци, че патронът на бравата ви умира — действайте навреме", "url": "https://blog.apluslocksmith.bg/priznaci-iznosen-patron-brava.html", "datePublished": "2026-05-20"}, {"@type": "BlogPosting", "headline": "Втори ключ за BMW X5 Alpina (2020) — изработка и програмиране", "url": "https://blog.apluslocksmith.bg/izraboka-klyuch-bmw-x5-alpina-sofia.html", "datePublished": "2026-05-15"}], "inLanguage": "bg-BG"}]}</script>
 </head>
@@ -171,193 +188,207 @@ footer .base{border-top:1px solid #333230;margin-top:30px;padding-top:20px;font-
 <a class="hidem" href="./index.html">Блог</a>
 <a class="hidem" href="https://apluslocksmith.bg">Официален сайт</a>
 <a class="callbtn" href="tel:+359879993321">☎ 0879 99 33 21</a>
-</nav></div></header>
+<button class="menubtn" aria-label="Меню" aria-expanded="false" aria-controls="mnav">☰</button>
+</nav></div>
+<div class="mnav" id="mnav">
+<a href="./index.html">Всички случаи<span class="n">31</span></a>
+<div class="sep">Категории</div>
+<a href="./index.html#avto">Автоключарски услуги<span class="n">15</span></a>
+<a href="./index.html#bravi">Битови брави<span class="n">9</span></a>
+<a href="./index.html#garaji">Гаражи и бариери<span class="n">6</span></a>
+<a href="./index.html#dostap">Контрол на достъп<span class="n">1</span></a>
+<div class="sep">А+ Ключар</div>
+<a href="https://apluslocksmith.bg">Официален сайт<span class="n">→</span></a>
+<a href="tel:+359879993321">Обади се<span class="n">0879 99 33 21</span></a>
+</div>
+</header>
 <section class="hero"><div class="wrap">
 <div class="eyebrow">Из практиката</div>
 <h1>Реални случаи от ключарската ни работа в София</h1>
 <p>Брави, автоключове, дистанционни и системи за сигурност — какво срещаме на терен и как го решаваме. Всеки запис е истински случай от Малинова долина и района.</p>
 </div></section>
-<main class="wrap"><div class="grid"><a class="card" href="./izgubeni-klyuchove-audi-a6-2007-sofia.html">
+<div class="filters" id="filters"><button data-cat="" class="on">Всички<span class="cnt">31</span></button><button data-cat="avto">Автоключарски услуги<span class="cnt">15</span></button><button data-cat="bravi">Битови брави<span class="cnt">9</span></button><button data-cat="garaji">Гаражи и бариери<span class="cnt">6</span></button><button data-cat="dostap">Контрол на достъп<span class="cnt">1</span></button></div>
+<main class="wrap"><div class="grid"><a class="card" data-cat="avto" href="./izgubeni-klyuchove-audi-a6-2007-sofia.html">
 <div class="thumb"><img src="./img/post36_c.jpg" alt="Нов ключ за Audi A6 2007, изработен на място в София" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Изгубени ключове за Audi A6 (2007) — пътят минава през волана</h2>
 <p class="ex">Дойде сутринта без нито един ключ и си тръгна преди обяд със свой собствен. Между двете — модулът, който заключва волана, и един-единствен опит да бъде разчетен.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./novijat-ni-tehnicheski-konsultant.html">
+<a class="card" data-cat="avto" href="./novijat-ni-tehnicheski-konsultant.html">
 <div class="thumb"><img src="./img/post35_c.jpg" alt="Коте стои върху куфара с инструменти на автоключар, до програматор OBDSTAR" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Новият ни технически консултант</h2>
 <p class="ex">Изгубени ключове за Honda Accord 2009, изработка на място в София. Куфарът обаче беше зает — от някой, който не беше викал никого, но имаше мнение.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./locksport-hobi-koeto-podobryava-klyuchalkite.html">
+<a class="card" data-cat="bravi" href="./locksport-hobi-koeto-podobryava-klyuchalkite.html">
 <div class="thumb"><img src="./img/post15_2.jpg" alt="Демонстрация на отваряне на базов патрон в ателието на А+ Ключар" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Битови брави</span>
 <h2>Locksport — хобито, което направи ключалките по-добри</h2>
 <p class="ex">Защити, които днес приемаме за даденост при всяка сериозна ключалка, съществуват, защото някой ги е намерил да липсват и го е казал на глас.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./izrabotka-klyuch-vw-up-2012-sofia.html">
+<a class="card" data-cat="avto" href="./izrabotka-klyuch-vw-up-2012-sofia.html">
 <div class="thumb"><img src="./img/post33_1.jpg" alt="Нов ключ за Volkswagen Up 2012, изработен на място в София" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Изгубен ключ за VW Up (2012) — изработка на място за под час</h2>
 <p class="ex">Табло Magneti Marelli на UDS платформа, криптиран чип ID48 CAN и блейд HU66 по секрет, разчетен с декодер Lishi. Модел, при който бързането струва скъпо.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./kombinirane-distancionni-jma-mbt-sofia.html">
+<a class="card" data-cat="garaji" href="./kombinirane-distancionni-jma-mbt-sofia.html">
 <div class="thumb"><img src="./img/post32_1.jpg" alt="Дистанционни DEA и ROGER Technology до копиращо дистанционно JMA M-BT" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Гаражи и бариери</span>
 <h2>Три дистанционни в едно — копиране на скачащ и фиксиран код с JMA M-BT</h2>
 <p class="ex">Портал на сградата с DEA и скачащ код, плюс ROGER с фиксиран — и двете в едно дистанционно. Защо скачащият код е друга работа и къде се късат евтините копия.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./evva-3ks-taf-vremenen-dostap-sofia.html">
+<a class="card" data-cat="bravi" href="./evva-3ks-taf-vremenen-dostap-sofia.html">
 <div class="thumb"><img src="./img/post31_1.jpg" alt="Четири патрона EVVA 3KS с функция TAF преди монтаж в къща в София" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Битови брави</span>
 <h2>Ключ, който работи само когато вие решите — EVVA 3KS с функция TAF</h2>
 <p class="ex">Дадохте ключ на майстора и вече нямате контрол над него. С функцията TAF сервизният ключ се включва и изключва с едно превъртане — механично, без ток и батерии.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./iznosen-kontakten-klyuch-remont-sofia.html">
+<a class="card" data-cat="avto" href="./iznosen-kontakten-klyuch-remont-sofia.html">
 <div class="thumb"><img src="./img/post21_1.jpg" alt="Сравнение между износен и новоизработен контактен ключ за автомобил" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Труден за завъртане контактен ключ? Не бързайте със смяна на патрона</h2>
 <p class="ex">Ключът за колата се върти все по-трудно в контакта и всяко пускане на двигателя се превръща в дребно изпитание. Причината почти никога не е в патрона.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./mnogo-priemnici-distancionno-bariera-sofia.html">
+<a class="card" data-cat="garaji" href="./mnogo-priemnici-distancionno-bariera-sofia.html">
 <div class="thumb"><img src="./img/post22_1.jpg" alt="Множество отделни приемници за дистанционни, накачени над автоматика на бариера" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Гаражи и бариери</span>
 <h2>Твърде много приемници на бариерата? Обединяваме ги в едно устройство</h2>
 <p class="ex">Всяко ново дистанционно с годините добавя по още един приемник над мотора на бариерата или портала. Резултатът рядко изглежда добре — и почти никога не работи надеждно.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./izgubeni-klyuchove-kia-niro-sofia.html">
+<a class="card" data-cat="avto" href="./izgubeni-klyuchove-kia-niro-sofia.html">
 <div class="thumb"><img src="./img/post23_1.jpg" alt="Програмиране на нов смарт ключ за електрическа Kia Niro на място в София" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Kia Niro без нито един ключ — изработка на нов смарт ключ на място</h2>
 <p class="ex">Собственик на електрическа Kia Niro остана без нито един работещ ключ. Отключихме колата без повреди и изработихме нов смарт ключ там, където беше спряла.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./distancionno-avtomatika-berg-sofia.html">
+<a class="card" data-cat="garaji" href="./distancionno-avtomatika-berg-sofia.html">
 <div class="thumb"><img src="./img/post24_1.jpg" alt="Обучаване на ново дистанционно за автоматика BERG на гаражна врата" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Гаражи и бариери</span>
 <h2>Допълнително дистанционно за автоматика BERG — обучаване на място</h2>
 <p class="ex">Нов член на семейството, изгубено дистанционно или просто искате резервно — обучаваме допълнителни дистанционни за автоматика BERG бързо и на място.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./remont-distancionno-modul-vw-golf-sofia.html">
+<a class="card" data-cat="avto" href="./remont-distancionno-modul-vw-golf-sofia.html">
 <div class="thumb"><img src="./img/post25_1.jpg" alt="Два нови сгъваеми ключа и допълнителен модул за дистанционно на VW Golf IV" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Проблемно дистанционно и комфорт модул на VW Golf IV — решение без скъп ремонт</h2>
 <p class="ex">Фабричното дистанционно на този Volkswagen Golf IV беше спряло да отваря и заключва надеждно — а причината се оказа остарял комфорт модул.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./zashto-avtoklyuch-struva-skupo-sofia.html">
+<a class="card" data-cat="avto" href="./zashto-avtoklyuch-struva-skupo-sofia.html">
 <div class="thumb"><img src="./img/post26_1.jpg" alt="Колекция от оригинални автомобилни дистанционни ключове на различни марки" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Как се прави ключ за кола — какво стои зад изработката и защо отнема време</h2>
 <p class="ex">Металното острие е само началото. Транспондер, имобилайзер и процедури със заложено изчакване — какво точно се случва, докато един ключ стане работещ.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./distancionno-proteco-garazhna-vrata-sofia.html">
+<a class="card" data-cat="garaji" href="./distancionno-proteco-garazhna-vrata-sofia.html">
 <div class="thumb"><img src="./img/post27_1.jpg" alt="Проверка на честота на дистанционно PROTECO с професионален анализатор KEYDIY KD X4" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Гаражи и бариери</span>
 <h2>Едно дистанционно за гаражна врата и автоматика PROTECO</h2>
 <p class="ex">Ролетна гаражна врата и автоматика PROTECO на портала — и отново две различни дистанционни в джоба? Можем да ги комбинираме в едно.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./vtori-klyuch-renault-modus-sofia.html">
+<a class="card" data-cat="avto" href="./vtori-klyuch-renault-modus-sofia.html">
 <div class="thumb"><img src="./img/post28_1.jpg" alt="Нарязан и програмиран резервен ключ за Renault Modus" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Втори ключ за Renault Modus — нарязан и програмиран за 15 минути</h2>
 <p class="ex">Без чакане, без записване седмица напред — вторият ключ за този Renault Modus беше нарязан и програмиран директно в ателието ни.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./lagard-seifovi-bravi-bankomat-sofia.html">
+<a class="card" data-cat="bravi" href="./lagard-seifovi-bravi-bankomat-sofia.html">
 <div class="thumb"><img src="./img/post29_1.jpg" alt="Комбинирани сейфови брави LaGard 3300 и 2200, снети от банкомати" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Битови брави</span>
 <h2>LaGard 3300 и 2200 — сейфови брави от банкомати за ентусиасти</h2>
 <p class="ex">Сдобихме се с няколко сейфови брави LaGard 3300 и 2200, снети от банкомати — рядка възможност да разгледате истински банков механизъм отблизо.</p>
 <span class="more">Прочети случая →</span></div></a>
 
-<a class="card" href="./bmw-m8-bdc3-programirane-klyuchove-sofia.html">
+<a class="card" data-cat="avto" href="./bmw-m8-bdc3-programirane-klyuchove-sofia.html">
 <div class="thumb"><img src="./img/post30_1.jpg" alt="Оригинални ключове на BMW M8 в интериора на автомобила" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>BMW M8 Competition — програмиране на два оригинални ключа по системата BDC</h2>
 <p class="ex">BDC заменя познатите CAS модули при съвременните BMW и вдига летвата по криптирана защита. Методите, които вършат работа по по-старите коли, тук не водят доникъде.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./izguben-klyuch-toyota-corolla-2016-sofia.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="avto" href="./izguben-klyuch-toyota-corolla-2016-sofia.html">
 <div class="thumb"><img src="./img/post14_1.jpg" alt="Нов програмиран ключ за Toyota Corolla 2016 в купето" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Изгубен ключ за Toyota Corolla (2016, Luna) — изработка на адрес</h2>
 <p class="ex">Загубихте ключовете за вашата Toyota Corolla? Има бързо решение — и не минава през дни чакане в сервиза.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./slabi-fabrichni-patroni-vhodna-vrata-sofia.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="bravi" href="./slabi-fabrichni-patroni-vhodna-vrata-sofia.html">
 <div class="thumb"><img src="./img/post15_1.jpg" alt="Отваряне на фабричен патрон с шперц за секунди" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Битови брави</span>
 <h2>Колко сигурен е фабричният патрон на входната ви врата</h2>
 <p class="ex">Масовите турски и китайски врати се продават на вид, а патронът е мястото, на което е спестено всичко. Шестте атакни вектора и какво дава средният клас от доказан производител.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./izrabotka-dublikat-klyuch-zagotovki-sofia.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="bravi" href="./izrabotka-dublikat-klyuch-zagotovki-sofia.html">
 <div class="thumb"><img src="./img/post13_1.jpg" alt="Купчина SILCA заготовки за ключове на плота на ателието" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Битови брави</span>
 <h2>Изработка на ключове — стотици профили заготовки на склад</h2>
 <p class="ex">Зад всеки ключ стои правилната заготовка. И тук е разликата между „нямаме такъв профил&quot; и „готово за пет минути&quot;.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./izpran-avtoklyuch-remont-korozia-sofia.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="avto" href="./izpran-avtoklyuch-remont-korozia-sofia.html">
 <div class="thumb"><img src="./img/post12_1.jpg" alt="Платка на автомобилен ключ с корозия след пране" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Изпран автоключ — почистване на корозия и възстановяване на платката</h2>
 <p class="ex">Изпрахте ли вече ключа от колата това лято? Случва се на всеки — ключът остава в джоба, панталонът отива в пералнята.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./svalyaem-teglich-westfalia-zaklyuchvane-sofia.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="avto" href="./svalyaem-teglich-westfalia-zaklyuchvane-sofia.html">
 <div class="thumb"><img src="./img/post11_1.jpg" alt="Сваляем теглич Westfalia, монтиран под задната броня на автомобил" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Заяло заключване на сваляем теглич Westfalia — сваляне на място</h2>
 <p class="ex">Тръгвате на юг? Ако сте със сваляем теглич, знаете реда — куката се маха, когато не теглите. Дребна подробност, която лесно се забравя в бързината преди път.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./smiana-patron-evva-eps-sofia.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="bravi" href="./smiana-patron-evva-eps-sofia.html">
 <div class="thumb"><img src="./img/post01_1.jpg" alt="Незащитен патрон с грешен размер на входна врата преди смяна" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Битови брави</span>
 <h2>Смяна на патрон с EVVA EPS — случай от практиката в Малинова долина</h2>
 <p class="ex">Клиент ни посети за нещо съвсем обикновено — дубликат на ключ. Оказа се, че поводът за посещение е най-малкият проблем.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./klonirane-rfid-nfc-karti-sofia.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="dostap" href="./klonirane-rfid-nfc-karti-sofia.html">
 <div class="thumb"><img src="./img/post02_1.jpg" alt="Анализ и клониране на RFID Mifare карта с четец на лаптоп" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Контрол на достъп</span>
 <h2>Клониране и декодиране на RFID/NFC карти за достъп в София</h2>
 <p class="ex">Криптиран чип за RFID достъп, а ключарите само вдигат рамене? При нас това не е проблем.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./remont-zaklinila-brava-solid-55.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="bravi" href="./remont-zaklinila-brava-solid-55.html">
 <div class="thumb"><img src="./img/post03_1.jpg" alt="Механизъм на брава Solid 55, изхабен и на път да блокира" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Битови брави</span>
 <h2>Заклинила брава Solid 55 — фино отваряне и смяна на механизма</h2>
 <p class="ex">Клиент ни се обади — бравата му „закачаше" от известно време и накрая спря да отключва напълно.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./programirane-distancionno-bariera-sofia.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="garaji" href="./programirane-distancionno-bariera-sofia.html">
 <div class="thumb"><img src="./img/post04_1.jpg" alt="Отваряне на кутията за управление на паркинг бариера за програмиране" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Гаражи и бариери</span>
 <h2>Загубено дистанционно за бариера — отваряне и програмиране на място</h2>
 <p class="ex">Загубено дистанционно за бариерата, а фирмата по поддръжка и домоуправителят ви бавят със седмици?</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./universalno-distancionno-garaj-bariera-portal.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="garaji" href="./universalno-distancionno-garaj-bariera-portal.html">
 <div class="thumb"><img src="./img/post05_1.jpg" alt="Универсално копируемо дистанционно JMA за няколко врати" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Гаражи и бариери</span>
 <h2>Едно дистанционно за гараж, бариера и портал — консолидация</h2>
 <p class="ex">Имате гараж, бариера и портал — и три различни дистанционни в джоба? Можем да ги комбинираме в едно.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./sled-vzlom-evva-mcs-bronirovka-sofia.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="bravi" href="./sled-vzlom-evva-mcs-bronirovka-sofia.html">
 <div class="thumb"><img src="./img/post06_1.jpg" alt="Входна врата с монтирана бронировка и патрон EVVA MCS" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Битови брави</span>
 <h2>След взлом — ъпгрейд с EVVA MCS и бронировка в София</h2>
 <p class="ex">Този клиент стана жертва на взлом с технически средства. Решихме проблема из основи — не просто поправка, а сериозен ъпгрейд на защитата.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./izraboka-klyuch-toyota-sequoia-sofia.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="avto" href="./izraboka-klyuch-toyota-sequoia-sofia.html">
 <div class="thumb"><img src="./img/post07_1.jpg" alt="Нов изработен ключ за Toyota Sequoia Platinum до визитка A+ Locksmith" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Изгубен ключ за Toyota Sequoia Platinum — изработка на място</h2>
 <p class="ex">Изгубени ключове? Не е краят на света.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./remont-distancionno-saab-platka.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="avto" href="./remont-distancionno-saab-platka.html">
 <div class="thumb"><img src="./img/post08_1.jpg" alt="Диагностика на платка на автомобилно дистанционно с честотен анализатор KEYDIY" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Ремонт на дистанционно за SAAB — диагностика на платката</h2>
 <p class="ex">Не всяко дистанционно отива за смет, когато спре да работи. Често проблемът е на самата платка — бутон, контакт, предавател — и се решава с ремонт.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./priznaci-iznosen-patron-brava.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="bravi" href="./priznaci-iznosen-patron-brava.html">
 <div class="thumb"><img src="./img/post09_1.jpg" alt="Вътрешност на износен патрон FAB с повредени щифтове" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Битови брави</span>
 <h2>Признаци, че патронът на бравата ви умира — действайте навреме</h2>
 <p class="ex">Бравите и патроните не се развалят изведнъж — обикновено дават знаци предварително.</p>
-<span class="more">Прочети случая →</span></div></a><a class="card" href="./izraboka-klyuch-bmw-x5-alpina-sofia.html">
+<span class="more">Прочети случая →</span></div></a><a class="card" data-cat="avto" href="./izraboka-klyuch-bmw-x5-alpina-sofia.html">
 <div class="thumb"><img src="./img/post10_1.jpg" alt="Нов ключ за BMW X5 Alpina пред арматурното табло на автомобила" loading="lazy" width="640" height="400"></div>
 <div class="body"><span class="tag">Автоключарски услуги</span>
 <h2>Втори ключ за BMW X5 Alpina (2020) — изработка и програмиране</h2>
@@ -448,5 +479,25 @@ footer .base{border-top:1px solid #333230;margin-top:30px;padding-top:20px;font-
 </div>
 <div class="base">© 2026 А+ Ключар · А ПЛЮС ЛОКСМИТ ООД · Всички права запазени.</div>
 </div></footer>
+<script>
+(function(){
+ var b=document.querySelector('.menubtn'), m=document.getElementById('mnav');
+ if(b&&m){b.addEventListener('click',function(){
+   var o=m.classList.toggle('open'); b.setAttribute('aria-expanded',o?'true':'false');
+   b.textContent=o?'\u2715':'\u2630';});}
+ var f=document.getElementById('filters');
+ if(f){
+  var cards=[].slice.call(document.querySelectorAll('.grid > .card'));
+  function apply(s){
+   cards.forEach(function(c){c.style.display=(!s||c.dataset.cat===s)?'':'none';});
+   [].forEach.call(f.children,function(x){x.classList.toggle('on',(x.dataset.cat||'')===(s||''));});
+   history.replaceState(null,'',s?('#'+s):location.pathname);
+  }
+  f.addEventListener('click',function(e){
+   var t=e.target.closest('button'); if(!t)return; apply(t.dataset.cat||'');});
+  apply((location.hash||'').replace('#','')); 
+ }
+})();
+</script>
 </body>
 </html>

@@ -86,3 +86,19 @@ footer .base{border-top:1px solid #333230;margin-top:30px;padding-top:20px;font-
 .brand .logo{height:34px;width:auto;display:block}
 @media(max-width:640px){.brand .logo{height:28px}}
 .flogo{height:34px;width:auto;margin-bottom:12px;display:block}
+/* мобилно меню */
+.menubtn{display:none;background:none;border:0;color:#fff;font-size:21px;line-height:1;padding:9px 11px;cursor:pointer;border-radius:6px}
+.menubtn:hover,.menubtn:focus-visible{background:rgba(255,255,255,.12)}
+.mnav{display:none;background:var(--panel);border-top:1px solid rgba(255,255,255,.1);padding:6px 0 12px}
+.mnav.open{display:block}
+.mnav a{display:flex;justify-content:space-between;align-items:center;color:#d8d3cc;padding:13px 20px;font-size:15px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.07)}
+.mnav a:active{background:rgba(255,255,255,.06)}
+.mnav a .n{color:#8d8880;font-weight:700;font-size:12.5px}
+.mnav .sep{padding:15px 20px 7px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8d8880;font-weight:800}
+@media(max-width:640px){.menubtn{display:block}.top nav{gap:7px}.brand .logo{height:24px}.callbtn{padding:9px 11px;font-size:12.5px;white-space:nowrap;letter-spacing:-.2px}}
+/* филтри по категория */
+.filters{max-width:1180px;margin:0 auto;padding:24px 20px 0;display:flex;gap:8px;flex-wrap:wrap}
+.filters button{border:1px solid var(--line);background:#fff;color:var(--ink-soft);padding:8px 15px;border-radius:999px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;transition:all .15s}
+.filters button:hover{border-color:var(--ink-soft)}
+.filters button.on{background:var(--panel);color:#fff;border-color:var(--panel)}
+.filters .cnt{opacity:.55;margin-left:5px;font-size:12.5px}
